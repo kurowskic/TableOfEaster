@@ -1,0 +1,16 @@
+del *.log
+del _temp.o
+del *.rc
+del *.obj
+del *.c
+del *.res
+del *.rsp
+del *.tds
+del _hmg_resconfig.h
+del errorlog.htm
+del toe_ver.ch
+del toe_hmg.exe
+del toe.exe
+del toe.log
+del temp.txt
+del *.bak
