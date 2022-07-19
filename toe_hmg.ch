@@ -5,7 +5,7 @@
 *-----------------------------------------------------------------------------*
 
 #DEFINE  _PRG1_      '2022'
-#DEFINE  _PRG2_      '196'
+#DEFINE  _PRG2_      '200'
 #DEFINE  _PRG3_      '1'
 
 #DEFINE  _DB1_       ''
@@ -13,9 +13,9 @@
 #DEFINE  _DB3_       ''
 
 
-#DEFINE  _OLD_PRG1_  '0000'
-#DEFINE  _OLD_PRG2_  '000'
-#DEFINE  _OLD_PRG3_  '0'
+#DEFINE  _OLD_PRG1_  '2022'
+#DEFINE  _OLD_PRG2_  '196'
+#DEFINE  _OLD_PRG3_  '1'
 
 #DEFINE  _OLD_DB1_   ''
 #DEFINE  _OLD_DB2_   ''

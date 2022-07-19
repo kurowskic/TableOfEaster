@@ -194,42 +194,12 @@ PROCEDURE Main()
 
     LOAD WINDOW toe_hmg2 AS win_Main
 
-//    settextboxcuebanner( "win_Main" , "txb_Name"    , " Nazwa instytucji (fragment)" )
-//    settextboxcuebanner( "win_Main" , "txb_Address" , " ulica (fragment)" )
-//    settextboxcuebanner( "win_Main" , "txb_Place"   , " miejscowoœæ (fragment)" )
-
 #ENDIF
 
 
 #IFDEF _HMG_3_
 
     LOAD WINDOW toe_hmg3 AS win_Main
-
-/*
-    HMG_ChangeWindowStyle( win_Main.lbl_Name.HANDLE    , 0x00800200 , NIL , .F. , .T. )
-    HMG_ChangeWindowStyle( win_Main.lbl_Address.HANDLE , 0x00800200 , NIL , .F. , .T. )
-    HMG_ChangeWindowStyle( win_Main.lbl_Place.HANDLE   , 0x00800200 , NIL , .F. , .T. )
-
-    EventProcessAllHookMessage( EventCreate( "LabelEventHandler" , win_Main.lbl_Name.HANDLE )    , .T.)
-    EventProcessAllHookMessage( EventCreate( "LabelEventHandler" , win_Main.lbl_Address.HANDLE ) , .T.)
-    EventProcessAllHookMessage( EventCreate( "LabelEventHandler" , win_Main.lbl_Place.HANDLE )   , .T.)
-
-
-    HMG_ChangeWindowStyle( win_Main.lbl_First.HANDLE  , 0x00800200 , NIL, .F. , .T. )
-    HMG_ChangeWindowStyle( win_Main.lbl_Prior.HANDLE  , 0x00800200 , NIL, .F. , .T. )
-    HMG_ChangeWindowStyle( win_Main.lbl_Next.HANDLE   , 0x00800200 , NIL, .F. , .T. )
-    HMG_ChangeWindowStyle( win_Main.lbl_Last.HANDLE   , 0x00800200 , NIL, .F. , .T. )
-
-    EventProcessAllHookMessage( EventCreate( "LabelEventHandler" , win_Main.lbl_First.HANDLE ) , .T.)
-    EventProcessAllHookMessage( EventCreate( "LabelEventHandler" , win_Main.lbl_Prior.HANDLE ) , .T.)
-    EventProcessAllHookMessage( EventCreate( "LabelEventHandler" , win_Main.lbl_Next.HANDLE )  , .T.)
-    EventProcessAllHookMessage( EventCreate( "LabelEventHandler" , win_Main.lbl_Last.HANDLE )  , .T.)
-
-
-    SetCueBanner( GetControlHandle( "txb_Name"    , "win_Main" ) , " Nazwa instytucji (fragment)" , .F. )
-    SetCueBanner( GetControlHandle( "txb_Address" , "win_Main" ) , " ulica (fragment)"            , .F. )
-    SetCueBanner( GetControlHandle( "txb_Place"   , "win_Main" ) , " miejscowoœæ (fragment)"      , .F. )
-*/
 
 #ENDIF
 
@@ -336,7 +306,7 @@ PROCEDURE Main()
     AADD( aFrm , { "win_Main" , win_Main.Row , win_Main.Col } )
 
     ON KEY ALT+F4 OF win_Main ACTION { || EndTheProgram() }
-    ON KEY F2     OF win_Main ACTION { || SetCenterMainWindow()    }
+    ON KEY F2     OF win_Main ACTION { || SetCenterMainWindow() }
 
 
 #IFDEF _HMG_2_
@@ -415,18 +385,6 @@ PROCEDURE Main()
 
 RETURN
 *-----------------------------------------------------------------------------*
-
-
-#IFDEF _HMG_2_
-*-----------------------------------------------------------------------------*
-FUNCTION settextboxcuebanner( cParent , cControl , cText )
-*-----------------------------------------------------------------------------*
-
-  sendmessagewidestring( GetControlHandle( cControl , cParent ) , EM_SETCUEBANNER , FALSE , cText )
-
-RETURN NIL
-*-----------------------------------------------------------------------------*
-#ENDIF
 
 
 *-----------------------------------------------------------------------------*
